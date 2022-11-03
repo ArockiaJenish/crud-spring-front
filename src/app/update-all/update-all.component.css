@@ -1,0 +1,26 @@
+ h1.align {
+     margin-top: 2%;
+     text-align: center;
+     font-size: 200%;
+     color: blueviolet;
+ }
+
+ th {
+     font-size: 150%;
+ }
+
+ .marg-right {
+     margin-left: 88%;
+ }
+
+ #title {
+     background-color: gray;
+ }
+
+ tr:nth-child(odd) {
+     background-color: #A8F3EA;
+ }
+
+ tr:nth-child(even) {
+     background-color: #D8D5DB;
+ }

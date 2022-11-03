@@ -1,0 +1,39 @@
+.area {
+    margin-top: 2%;
+    margin-left: 10%;
+    width: 80%;
+    background-color: rgb(215, 239, 249);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2%;
+    font-size: 200%;
+    color: rgb(1, 11, 11);
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.form-design {
+    border-radius: 10px;
+    margin-left: 30%;
+    width: 40%;
+    padding: 0.5%;
+    margin-bottom: 2%;
+    font-size: 120%;
+}
+
+label {
+    margin-left: 20%;
+    font-size: 130%;
+}
+
+button {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.align-button {
+    text-align-last:right;
+}

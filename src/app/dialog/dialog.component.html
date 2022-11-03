@@ -1,0 +1,92 @@
+<div *ngIf="working">
+  <h1 mat-dialog-title>Add Student</h1>
+
+  <div *ngIf="exception">
+    <p style="color: red; text-align:center">Something problem</p>
+  </div>
+
+  <div mat-dialog-content>
+    <form [formGroup]="studentForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Enter Candidate Name</mat-label>
+        <input formControlName="name" matInput placeholder="Candidate Name">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Uppercase</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Enter Candidate email</mat-label>
+        <input formControlName="email" matInput placeholder="Candidate Email">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Enter valid email</mat-hint>
+      </mat-form-field>
+
+      <mat-label>
+        <h3>Gender</h3>
+      </mat-label>
+      <mat-radio-group formControlName="gender" class="example-radio-group" aria-label="Select an option">
+        <mat-radio-button class="example-radio-button" *ngFor="let gen of genderList" [value]="gen">{{gen}}
+        </mat-radio-button>
+      </mat-radio-group>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Choose date of Birth</mat-label>
+        <input formControlName="dob" matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Qualification</mat-label>
+        <mat-select formControlName="qualification" placeholder="">
+          <mat-option value="SSLC">SSLC</mat-option>
+          <mat-option value="HSC">HSC</mat-option>
+          <mat-option value="Under Graguate">Under Graguate</mat-option>
+          <mat-option value="Post Graguate">Post Graguate</mat-option>
+        </mat-select>
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Qualification of Candidate</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Mobile Number</mat-label>
+        <input formControlName="mobile" matInput type="number" placeholder="Mobile Number">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Discription</mat-label>
+        <textarea formControlName="discription" matInput></textarea>
+      </mat-form-field>
+    </form>
+  </div>
+
+  <div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="accent" mat-dialog-close="">Cancel</button>
+    <button style="margin:8px" mat-raised-button color="primary" (click)="addStudent()">Save</button>
+  </div>
+</div>
+
+<!-- Saving animation -->
+<div *ngIf="submitting" class="container">
+  <div class="row">
+    <div class="spinner-border col-4" role="status">
+      <span class="visually-hidden">Saving...</span>
+    </div>
+    <div class="col-8">
+      <h2 style="text-align: center;">Saving</h2>
+    </div>
+  </div>
+</div>
+
+<!-- Succeessfull message -->
+<div *ngIf="submited" class="container">
+  <h2 style="text-align: center;">Saved Successfully</h2>
+</div>
+
+<!-- Error Message -->
+<!-- <div>
+  <h2 style="text-align: center;">Something Error</h2>
+</div> -->

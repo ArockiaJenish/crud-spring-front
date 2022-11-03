@@ -1,0 +1,36 @@
+<div class="area">
+    <h1>Edit Details</h1>
+
+    <div class="container" *ngIf="student">
+        <!-- <form [formGroup]="studentForm"> -->
+            <label>Name:</label><br>
+            <input type="text" class="form-design" [(ngModel)]="student.name" /><br>
+            <label>Email:</label><br>
+            <input type="text" class="form-design" [(ngModel)]="student.email" /><br>
+            <label>Gender:</label><br>
+            <select name="gender" class="form-design" [(ngModel)]="student.gender"><br>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <label class="form-label">Date Of Birth:</label><br>
+            <input type="date" class="form-design" [(ngModel)]="student.dob"><br>
+            <label>Qualification:</label><br>
+            <select name="qualification" class="form-design" [(ngModel)]="student.qualification">
+                <option value="SSLC">SSLC</option>
+                <option value="HSC">HSC</option>
+                <option value="Under Graguate">Under Graguate</option>
+                <option value="Post Graguate">Post Graguate</option>
+            </select><br>
+            <label>Mobile:</label><br>
+            <input type="number" class="form-design" [(ngModel)]="student.mobile"><br>
+            <label>Description:</label><br>
+            <textarea class="form-design" [(ngModel)]="student.discription"></textarea><br>
+        <!-- </form> -->
+    </div>
+
+    <div mat-dialog-actions class="align-button">
+        <button mat-raised-button color="accent" routerLink="/allStu">Cancel</button>
+        <button mat-raised-button color="primary" (click)="updateStu()">Update</button>
+    </div>
+
+</div>

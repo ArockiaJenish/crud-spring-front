@@ -1,0 +1,30 @@
+.align{
+    margin-top: 2%;
+    text-align: center;
+    font-size: 200%;
+    color: blueviolet;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: #8C8CE4;
+    text-transform: uppercase;
+}
+
+th{
+    text-align: center;
+    font-size: 120%;
+    background-color: dimgray;
+    color: greenyellow;
+}
+
+button.edit{
+    margin-left: 5px
+}
+
+
+tr:nth-child(odd) {
+    background-color: #A8F3EA;
+}
+
+tr:nth-child(even) {
+    background-color: #D8D5DB;
+}

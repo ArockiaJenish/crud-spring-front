@@ -1,0 +1,36 @@
+<h1 class="align"><strong>Student Details</strong></h1>
+<div class="container">
+    <table class="table table-bordered">
+        <thead class="thead">
+            <tr>
+                <th>S.No</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Qualification</th>
+                <th>Mobile</th>
+                <th>Discription</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+            <tr *ngFor="let student of studentDetails; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.gender}}</td>
+                <td>{{student.dob}}</td>
+                <td>{{student.qualification}}</td>
+                <td>{{student.mobile}}</td>
+                <td>{{student.discription}}</td>
+                <td>
+                    <button mat-flat-button color="warn" (click)="deleteStu(student)">Delete</button>
+                    <button mat-flat-button class="edit" color="accent" (click)="edit(student)">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

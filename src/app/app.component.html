@@ -1,0 +1,18 @@
+
+  <mat-toolbar color="primary" class="toolBar">
+    <div>
+      <img class="logoImage" src="assets/images/presi.png" alt="Presidency College">
+    </div>
+    <button mat-icon-button class="example-icon home" routerLink="home"   aria-label="Example icon-button with menu icon">
+      <mat-icon>home</mat-icon>
+    </button>
+    <span class="dashboard">Sudent Dashboard</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="accent" (click)="openDialog()">Add Student</button>
+    <button class="marg-left" mat-raised-button color="accent" routerLink="allStu">Get students</button>
+    <button class="marg-left" mat-raised-button color="accent" routerLink="updateAll">Update All</button>
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+  <!-- <br> -->
+  <app-footer></app-footer>

@@ -1,0 +1,41 @@
+<h1 class="align">Update All Students</h1>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead class="thead">
+            <tr id="title">
+                <th>S.No</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>DOB</th>
+                <th>Qualification</th>
+                <th>Mobile</th>
+                <th>Discription</th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+            <tr *ngFor="let student of stuDetails; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{student.id}}</td>
+                <td><input type="text" class="form-control"  [(ngModel)]="student.name"/></td>
+                <td><input type="text" class="form-control" [(ngModel)]="student.email"/></td>
+                <td><select name="gender" class="form-control" [(ngModel)]="student.gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select></td>
+                <td><input type="date" class="form-control" [(ngModel)]="student.dob"></td>
+                <td><select name="qualification" class="form-control" [(ngModel)]="student.qualification">
+                    <option value="SSLC">SSLC</option>
+                    <option value="HSC">HSC</option>
+                    <option value="Under Graguate">Under Graguate</option>
+                    <option value="Post Graguate">Post Graguate</option>
+                </select></td>
+                <td><input type="number" class="form-control" [(ngModel)]="student.mobile"></td>
+                <td><textarea class="form-control" [(ngModel)]="student.discription"></textarea></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<button class="marg-right" mat-raised-button color="accent" (click)="update()">Update</button>
